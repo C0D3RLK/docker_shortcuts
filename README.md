@@ -18,6 +18,8 @@ Runs in a any linux based environment with docker pre-installed. This tools only
 4.) Delete & Prunce containers & images<br>
 5.) Create Backup of your container.<br>
 6.) Restore and deploy container from backup.<br>
+8.) Download file from running container</br>
+9.) Upload file into a running container</br>
 </br>
 
 # How to install
@@ -44,6 +46,7 @@ d list-ports   &emsp;&emsp; - To list all running docker pots</br>
 d backup       &emsp;&emsp; - To backup container</br>
 d restore      &emsp;&emsp; - To restore container from backup</br>
 d clean        &emsp;&emsp; - To prune</br>
+d copy         &emsp;&emsp; - To Upload / Download files between Host & Container</br>
 
 
 
