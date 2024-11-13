@@ -59,7 +59,7 @@ fi
 
 if [ $CMD == "restore" ]
 then
-$BSH $WDR/dload
+$BSH $WDR/dload $WDR
 fi
 
 if [ $CMD == "clean" ]
