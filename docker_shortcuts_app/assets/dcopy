@@ -28,11 +28,6 @@ $COM cp $input:$file_dir ./
 ls 
 fi
 
-if [ $action == 'q' ]
-then
-echo 'Program exited'
-fi
-
 if [ $action == 1 ]
 then
 echo -n  '#> Docker ID:'
