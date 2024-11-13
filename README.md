@@ -1,6 +1,5 @@
 # docker_shortcuts
-## Fadup of typing the full command to manage your dockers?
-## i have a solution for you.
+## Tired of typing out full commands to manage your Docker containers? I have a solution for you!
 
 I ’ve been using these CLI shortcut tools for a while, and they have significantly reduced the time I spend remembering long Docker commands.<br>
 I wanted to share this with others who might find it equally beneficial.
