@@ -1,21 +1,23 @@
 #!/bin/bash
 COM=$(which docker)
+BSH=$(which bash)
 $COM ps -a
+WRD=$1
+
 echo -n  'Docker ID #>:'
 read input
 echo "Killing Container"
 $COM kill $input
 echo "Removing Container"
-$COM rm $input
+#$COM rm $input
 $COM ps -a
 echo ""
 echo -n "Do you want to Clean Docker Containers? [y/n]"
 read clean
 if [ $clean == "y" ]
 then
-/usr/bin/bash /home/kanth/clean_size
+$BSH $WRD/dclean
 echo "Done."
 else
 return
 fi
-
