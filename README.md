@@ -1,4 +1,4 @@
-# docker_shortcuts
+# Docker Shortcut Tools
 ## Tired of typing out full commands to manage your Docker containers? I have a solution for you!
 
 I ’ve been using these CLI shortcut tools for a while, and they have significantly reduced the time I spend remembering long Docker commands.<br>
@@ -48,9 +48,9 @@ d restore      &emsp;&emsp; - To restore container from backup</br>
 d clean        &emsp;&emsp; - To prune</br>
 d copy         &emsp;&emsp; - To Upload / Download files between Host & Container</br>
 
-</br></br></br></br></br>
-
-### Troubleshooting
+</br></br>
+___
+# Troubleshooting
 </br>
 </br>
 If backup automatically chooses a wrong image, try cleanup your images by running the prune command<br>
