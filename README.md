@@ -48,5 +48,12 @@ d restore      &emsp;&emsp; - To restore container from backup</br>
 d clean        &emsp;&emsp; - To prune</br>
 d copy         &emsp;&emsp; - To Upload / Download files between Host & Container</br>
 
+</br></br></br></br></br>
 
-
+### Troubleshooting
+</br>
+</br>
+If backup automatically chooses a wrong image, try cleanup your images by running the prune command<br>
+d clean</br>
+</br>
+This will clear all abandoned/unwanted images and then re-run the backup command.
