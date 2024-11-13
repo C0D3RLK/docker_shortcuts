@@ -28,7 +28,7 @@ Just download the folder and run the command<br></br>
 </br>
 
 
-# Availble Commands:
+# Available Commands:
 </br>
 Command Available:</br>
 ------------------------</br>
