@@ -1,0 +1,74 @@
+#!/bin/bash
+clear
+DOC=$(which docker)
+#/usr/bin/docker ps -a
+#docker ps -a --format 'ID: {{ .ID }}\t Image: {{.Image}}\t Name: {{ .Names }}'
+$DOC ps -a --format 'table {{ .ID }}\t {{.Image}}\t {{ .Names }}\t  {{ .Status }}'
+echo ""
+echo "======================================="
+echo "Change/Set Docker Restart Policy."
+echo "You can list many ID with space between each."
+echo ""
+echo -n  'Insert Docker ID #>:'
+read input
+echo ""
+echo "----------------------------------------"
+echo "Selected Dockers:"
+echo ""
+$DOC inspect --format 'Name:{{.Name}} ID:{{.Config.Hostname}} Current-Restart-Policy:{{.HostConfig.RestartPolicy.Name}}' $input
+echo ""
+echo "-----------------------------------------"
+echo "Set Restart Option:"
+echo ""
+echo "[0] NO - You have to start manually"
+echo "[1] ALWAYS - Restarts the container if it stops"
+echo "[2] UNLESS-STOPPED - Restarts the container unless it was stopped (best option)"
+echo "[q] Cancel request"
+echo ""
+echo -n 'Set Restart Option #>:'
+read roption
+echo ""
+COMMAND="NA"
+if [ $roption == 0 ]
+then
+COMMAND="no"
+fi
+
+if [ $roption == 1 ]
+then
+COMMAND="always"
+fi
+
+if [ $roption == 2 ]
+then
+COMMAND="unless-stopped"
+fi
+
+if [ $roption == "q" ]
+then
+echo ""
+echo "Request canceled."
+fi
+
+if [ $roption != "q" ]
+then
+echo ""
+echo "Applying Option: $COMMAND"
+echo ""
+$DOC update --restart=$COMMAND $input
+#echo "Request Completed"
+#echo ""
+echo "Restarting container:"
+#echo ""
+$DOC restart $input
+echo ""
+echo "-------------------------------------------"
+echo "Retreaving Restart Policy:"
+#/usr/bin/docker inspect --format '{{config.hostname}} {{.HostConfig.RestartPolicy.Name}}' $input
+#/usr/bin/docker inspect --format '{{.Config.Hostname}} {{.HostConfig.RestartPolicy.Name}}' $input
+$DOC inspect --format 'Name:{{.Name}} Image:{{.Config.Image}} ContainerID:{{.Config.Hostname}} Restart-Policy:{{.HostConfig.RestartPolicy.Name}}' $input
+echo ""
+echo "Request Completed."
+echo ""
+#/usr/bin/docker ps
+fi

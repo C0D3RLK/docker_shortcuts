@@ -1,0 +1,73 @@
+#!/bin/bash
+#COM=(which docker)
+WDR=$1
+CMD=$2
+BSH=$(which bash)
+
+
+#d ls      - To list all running containers
+#d ls -a   - To list all running and hidden/stopped containers
+#d view    - To access container
+#d kill    - To remove container
+#d boot    - To restart container
+#d pop   - To set Restart-Policy
+#d list-ports    - To list all running docker pots
+#d backup        - To backup container
+#d restore       - To restore container from backup
+#d clean         - To prune
+#clean_size  dbackup  dboot  dcopy  dhelp  dkill  dload  dls  docker_shortcut  dpoption  drunauto  dshowport  dview
+
+if [ $CMD == "help" ]
+then
+$BSH $WDR/dhelp
+fi
+
+if [ $CMD == "ls" ]
+then
+$BSH $WDR/dls
+fi
+
+if [ $CMD == "view" ]
+then
+$BSH $WDR/dview
+fi
+
+if [ $CMD == "kill" ]
+then
+$BSH $WDR/dkill
+fi
+
+if [ $CMD == "boot" ]
+then
+$BSH $WDR/dboot
+fi
+
+if [ $CMD == "pop" ]
+then
+$BSH $WDR/dpoption
+fi
+
+if [ $CMD == "list-ports" ]
+then
+$BSH $WDR/dshowport
+fi
+
+if [ $CMD == "backup" ]
+then
+$BSH $WDR/dbackup
+fi
+
+if [ $CMD == "restore" ]
+then
+$BSH $WDR/dload
+fi
+
+if [ $CMD == "clean" ]
+then
+$BSH $WDR/dclean
+fi
+
+if [ $CMD == "img" ]
+then
+$BSH $WDR/dvimages
+fi

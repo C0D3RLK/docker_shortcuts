@@ -1,0 +1,20 @@
+#!/bin/bash
+COM=$(which docker)
+clear
+
+FIRST=$1
+list_ports(){
+echo ""
+echo "Retrieving running docker ports:"
+echo "================================="
+echo ""
+$COM ps --format 'table {{.Names}}\t\t {{.Ports}}'
+}
+
+
+
+
+#if [ $FIRST == "list-ports" ]
+#then
+list_ports
+#fi

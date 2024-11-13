@@ -1,0 +1,54 @@
+#!/bin/bash
+COM=$(which docker)
+clear
+$COM ps
+echo "=============================="
+echo ""
+echo "Perform Download/Upload?"
+echo "[0] Download - Copy from container to host"
+echo "[1] Upload - Copy file from host to container"
+echo "[q] Quit"
+echo ""
+echo -n '#>'
+read action
+
+
+
+if [ $action == 0 ]
+then
+echo -n  '#> Docker ID:'
+read input
+echo ""
+#docker cp myapp:/app/config/defaults.ini /tmp
+echo -n "File directory from docker:"
+read file_dir
+echo ""
+echo "Attempting to download_"
+$COM cp $input:$file_dir ./
+ls 
+fi
+
+if [ $action == 'q' ]
+then
+echo 'Program exited'
+fi
+
+if [ $action == 1 ]
+then
+echo -n  '#> Docker ID:'
+read input
+echo ""
+#docker cp myapp:/app/config/defaults.ini /tmp
+echo -n "File directory from host:"
+read file_dir
+echo -n 'Destination directory in container:'
+read file_dir_destination
+echo ""
+echo "Attempting to upload_"
+$COM cp $file_dir  $input:$file_dir_destination
+fi
+
+if [ $action == 'q' ]
+then
+echo 'Program exited'
+fi

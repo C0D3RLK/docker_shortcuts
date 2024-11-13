@@ -1,0 +1,14 @@
+#!/bin/bash
+COM=$(which docker)
+clear
+echo ""
+echo "Reboot Container"
+echo "------------------"
+echo ""
+$COM ps
+echo ""
+echo -n "ContainerID>: "
+read input
+
+$COM restart $input
+$COM ps

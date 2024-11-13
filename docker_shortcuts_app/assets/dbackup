@@ -1,0 +1,27 @@
+#!/bin/bash
+COM=$(which docker)
+$COM  ps -a
+echo ""
+echo "==============================="
+echo -n 'Set Container New Name #>:'
+read cname
+echo ""
+echo -n  'Docker ID #>:'
+read cid
+echo ""
+$COM container commit -a $cname $cid
+echo ""
+$COM images
+echo ""
+echo "Auto selecting image."
+ncid=$($COM images --format 'table {{.ID}} {{.Repository}}' | grep none | awk '{print $1}')
+echo $ncid
+echo ""
+#echo 'Set name for the backup file #>:'
+#read fname
+echo "Creating backup file_"
+$COM image save -o $cname.tar $ncid
+echo "Output file: $cname.tar"
+echo
+echo "Completed"
+ls

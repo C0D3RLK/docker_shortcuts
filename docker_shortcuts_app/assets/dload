@@ -1,0 +1,25 @@
+#!/bin/bash
+clear
+COM=$(which docker)
+ls -la
+echo -n  'Docker Image File #>:'
+read input
+echo "Importing Image_"
+echo ""
+$COM image load -i $input
+#/usr/bin/docker images
+
+#/usr/bin/docker images | awk 'FNR == 2 {print $3}'
+
+$COM images |  awk 'FNR == 2 {print $3} FNR == 1 {print $3}'
+
+echo ""
+echo -n "Do you want to Run this Image into container? [y/n]:"
+read run
+if [ $run == "y" ]
+then
+/usr/bin/bash /home/kanth/drunauto $input
+echo "Done."
+else
+return
+fi

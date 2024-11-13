@@ -1,0 +1,49 @@
+#!/bin/bash
+clear
+FILE=$1
+COM=$(which docker)
+image_id=$($COM images | awk 'FNR == 2 {print $3}')
+
+echo "Image deployed from file $FILE"
+echo ""
+echo -n  'Set Docker Name #>: '
+read name
+echo ""
+echo "You can set extra port with adding -p, example 8080:80 -p 8443:443"
+echo "For sigle port, insert without -p like this: 8080:80"
+echo ""
+echo -n 'Port #>: '
+read ports
+
+echo ""
+echo -n 'Do you want to set a volume? (y/n) #>:'
+read cfm_volume
+
+
+if [ $cfm_volume == 'y' ]
+then
+echo ""
+echo "Example /home/www:/var/www/html"
+echo ""
+echo -n 'Set Volume Path #>: '
+read volume
+
+
+#/usr/bin/docker run -d --name=$name -p $port $FILE
+#image_id=$(/usr/bin/docker images | awk 'FNR == 2 {print $3}')
+
+echo ""
+echo "All set, Deploying container_"
+$COM run -d --name=$name -p $ports -v $volume $image_id
+else
+
+echo ""
+echo "All set, Deploying container_"
+$COM run -d --name=$name -p $ports $image_id
+
+fi
+
+echo ""
+echo "Getting container list_"
+$COM ps | grep $name
+#echo $name $port $FILE $image_id

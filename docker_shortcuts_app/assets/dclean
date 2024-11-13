@@ -1,0 +1,27 @@
+#!/bin/bash
+COM=$(which docker)
+clear
+$COM ps -a
+echo ""
+echo ""
+echo "-------------------------------------------------------------"
+echo "IMAGES:"
+echo ""
+$COM images -a
+echo ""
+echo "This will prune and remove unwanted and abandoned containers and images"
+echo -n 'Proceed? (y/n):'
+read input
+
+if [ $input == "y" ]
+then
+echo "Initiating docker prune"
+echo "This will remove unused images"
+$COM system prune -a -f
+fi
+
+if [ $input == "n" ]
+then
+echo ""
+echo "Program exited."
+fi

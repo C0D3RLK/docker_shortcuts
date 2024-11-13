@@ -1,0 +1,24 @@
+#!/bin/bash
+COM=$(which docker)
+BSH=$(which bash)
+WSH=$(which sh)
+$COM ps
+echo -n  '#> Docker ID:'
+read input
+echo ""
+echo "[1] Bash"
+echo "[2] Sh"
+echo -n 'Which Environment #:>'
+read environment
+
+if [ $environment == 1 ]
+then
+$COM exec -it $input $BSH
+#echo 'hello'
+fi
+
+if [ $environment == 2 ]
+then
+$COM exec -it $input $WSH
+#echo 'hello'
+fi
