@@ -7,6 +7,7 @@ I wanted to share this with others who might find it equally beneficial.
 </br>
 You may modify or add more function as you wish.
 <br>
+### It's a prompt based docker manager. You request it ask for input and it'll does long command writing and execute it for you.
 </br>
 # What's In There:
 <br>
