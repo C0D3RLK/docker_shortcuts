@@ -2,7 +2,7 @@
 COM=$(which docker)
 BSH=$(which bash)
 $COM ps -a
-WRD=$1
+WDR=$1
 
 echo -n  'Docker ID #>:'
 read input
@@ -16,7 +16,7 @@ echo -n "Do you want to Clean Docker Containers? [y/n]"
 read clean
 if [ $clean == "y" ]
 then
-$BSH $WRD/dclean
+$BSH $WDR/dclean
 echo "Done."
 else
 return
