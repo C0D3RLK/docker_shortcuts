@@ -67,6 +67,11 @@ then
 $BSH $WDR/dclean
 fi
 
+if [ $CMD == "copy" ]
+then
+$BSH $WDR/dcopy
+fi
+
 if [ $CMD == "img" ]
 then
 $BSH $WDR/dvimages
