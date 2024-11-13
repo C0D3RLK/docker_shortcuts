@@ -1,6 +1,8 @@
 #!/bin/bash
 clear
 COM=$(which docker)
+BSH=$(which bash)
+WRD=$1
 ls -la
 echo -n  'Docker Image File #>:'
 read input
@@ -18,7 +20,7 @@ echo -n "Do you want to Run this Image into container? [y/n]:"
 read run
 if [ $run == "y" ]
 then
-/usr/bin/bash /home/kanth/drunauto $input
+$BSH $WRD/drunauto $input
 echo "Done."
 else
 return
