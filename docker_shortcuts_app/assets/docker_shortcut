@@ -34,7 +34,7 @@ fi
 
 if [ $CMD == "kill" ]
 then
-$BSH $WDR/dkill
+$BSH $WDR/dkill $WDR
 fi
 
 if [ $CMD == "boot" ]
