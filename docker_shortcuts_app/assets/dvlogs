@@ -7,8 +7,5 @@ echo -n  '#> Docker ID:'
 read input
 echo ""
 
-
-if [ $input == 1 ]
-then
 $COM logs $input
-fi
+
