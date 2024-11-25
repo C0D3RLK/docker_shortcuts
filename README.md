@@ -7,7 +7,7 @@ I wanted to share this with others who might find it equally beneficial.
 </br>
 You may modify or add more function as you wish.
 <br>
-### It's a prompt based docker manager. You request it ask for input and it'll does long command writing and execute it for you.
+### It's a prompt based docker manager. You request, it ask for input and it'll does long command writing and execute it for you.
 </br>
 # What's In There:
 <br>
@@ -20,6 +20,7 @@ Runs in a any linux based environment with docker pre-installed. This tools only
 6.) Restore and deploy container from backup.<br>
 8.) Download file from running container</br>
 9.) Upload file into a running container</br>
+10.) View running container logs </br>
 </br>
 
 # How to install
@@ -47,6 +48,7 @@ d backup       &emsp;&emsp; - To backup container</br>
 d restore      &emsp;&emsp; - To restore container from backup</br>
 d clean        &emsp;&emsp; - To prune</br>
 d copy         &emsp;&emsp; - To Upload / Download files between Host & Container</br>
+d log         &emsp;&emsp; - To view contianer logs</br>
 
 </br></br>
 ___
