@@ -15,6 +15,7 @@ BSH=$(which bash)
 #d backup        - To backup container
 #d restore       - To restore container from backup
 #d clean         - To prune
+#d log         - To view container log
 #clean_size  dbackup  dboot  dcopy  dhelp  dkill  dload  dls  docker_shortcut  dpoption  drunauto  dshowport  dview
 
 if [ $CMD == "help" ]
@@ -75,4 +76,9 @@ fi
 if [ $CMD == "img" ]
 then
 $BSH $WDR/dvimages
+fi
+
+if [ $CMD == "log" ]
+then
+$BSH $WDR/dvlogs
 fi
