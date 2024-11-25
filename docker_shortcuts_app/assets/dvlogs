@@ -1,0 +1,14 @@
+#!/bin/bash
+COM=$(which docker)
+BSH=$(which bash)
+WSH=$(which sh)
+$COM ps
+echo -n  '#> Docker ID:'
+read input
+echo ""
+
+
+if [ $input == 1 ]
+then
+$COM logs $input
+fi
