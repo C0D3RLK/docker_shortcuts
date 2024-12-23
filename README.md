@@ -60,8 +60,8 @@ ___
 </br>
 - If backup automatically chooses a wrong image, try cleanup your images by running the prune command<br>
 d clean</br>
-</br>
 This will clear all abandoned/unwanted images and then re-run the backup command.
+</br>
 
 </br>
 - Sometimes the <code>dview</code> may not able to start bash or sh, it because the path
