@@ -11,7 +11,7 @@ You may modify or add more function as you wish.
 </br>
 # What's In There:
 <br>
-Runs in a any linux based environment with docker pre-installed. This tools only provide few function like<br>
+Runs in any linux based environment with docker pre-installed. This tools only provide few function like<br>
 1.) List all dockers, images & ports <br>
 2.) Reboot container<br>
 3.) Change Restart-Policy<br>
@@ -21,6 +21,7 @@ Runs in a any linux based environment with docker pre-installed. This tools only
 8.) Download file from running container</br>
 9.) Upload file into a running container</br>
 10.) View running container logs </br>
+11.) Inspect running container </br>
 </br>
 
 # How to install
@@ -43,7 +44,7 @@ d kill         &emsp;&emsp; - To remove container</br>
 d boot         &emsp;&emsp; - To restart container</br>
 d pop          &emsp;&emsp; - To set Restart-Policy</br>
 d ls -a        &emsp;&emsp; - To list all running and hidden/stopped containers</br>
-d list-ports   &emsp;&emsp; - To list all running docker pots</br>
+d list-ports   &emsp;&emsp; - To list all running docker ports</br>
 d backup       &emsp;&emsp; - To backup container</br>
 d restore      &emsp;&emsp; - To restore container from backup</br>
 d clean        &emsp;&emsp; - To prune</br>
@@ -57,7 +58,11 @@ ___
 # Troubleshooting
 </br>
 </br>
-If backup automatically chooses a wrong image, try cleanup your images by running the prune command<br>
+- If backup automatically chooses a wrong image, try cleanup your images by running the prune command<br>
 d clean</br>
 </br>
 This will clear all abandoned/unwanted images and then re-run the backup command.
+
+</br>
+- Sometimes the <code>dview</code> may not able to start bash or sh, it because the path
+<code>/usr/bin/bash</code> & <code>/usr/bin/sh</code> . try using <code>/bin/bash </code> or <code> /bin/sh </code>
