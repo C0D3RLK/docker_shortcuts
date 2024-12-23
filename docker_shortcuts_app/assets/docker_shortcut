@@ -23,6 +23,11 @@ then
 $BSH $WDR/dhelp
 fi
 
+if [ $CMD == "ins" ]
+then
+$BSH $WDR/dinsp
+fi
+
 if [ $CMD == "ls" ]
 then
 $BSH $WDR/dls
