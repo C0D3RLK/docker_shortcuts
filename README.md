@@ -23,6 +23,11 @@ Runs in any linux based environment with docker pre-installed. This tools only p
 10.) View running container logs </br>
 11.) Inspect running container </br>
 </br>
+<center></center>
+<img src="https://public.kanthzone.com/images/docker_sh_howitworks.png" />
+</center>
+
+</br>
 
 # How to install
 </br>
