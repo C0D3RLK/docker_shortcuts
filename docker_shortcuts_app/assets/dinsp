@@ -9,11 +9,11 @@ echo "To cancel: n"
 echo -n 'Docker ID:> '
 read did
 
-  if [ $did == "n" ] then
-  echo "Action cancelled"
-  fi
+if [ $did == "n" ] then
+echo "Action cancelled"
+fi
   
-  if [ $did != "n" ] then
-  $CMD inspect $did
-  fi
+if [ $did != "n" ] then
+$CMD inspect $did
+fi
 
