@@ -49,6 +49,8 @@ d restore      &emsp;&emsp; - To restore container from backup</br>
 d clean        &emsp;&emsp; - To prune</br>
 d copy         &emsp;&emsp; - To Upload / Download files between Host & Container</br>
 d log         &emsp;&emsp; - To view contianer logs</br>
+d ins         &emsp;&emsp; - To inspect contianer </br>
+
 
 </br></br>
 ___
