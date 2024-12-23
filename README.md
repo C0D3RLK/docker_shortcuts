@@ -62,9 +62,9 @@ ___
 d clean</br>
 This will clear all abandoned/unwanted images and then re-run the backup command.
 </br>
-<b> REMEMBER: Test the backed up file if its working or not, sometimes it may failed to restore.</b>
+<b> REMEMBER: Test the back up file to make sure the file is workin, sometimes it may fail to restore.</b>
 </br>
 
 </br>
-- Sometimes the <code>dview</code> may not able to start bash or sh, it because the path
-<code>/usr/bin/bash</code> & <code>/usr/bin/sh</code> . try using <code>/bin/bash </code> or <code> /bin/sh </code>
+- Sometimes the <code>dview</code> may not able to start the bash or sh, it's because the path it uses
+<code>/usr/bin/bash</code> & <code>/usr/bin/sh</code> . Instead you can try using <code>/bin/bash </code> or <code> /bin/sh </code>
