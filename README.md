@@ -62,6 +62,8 @@ ___
 d clean</br>
 This will clear all abandoned/unwanted images and then re-run the backup command.
 </br>
+<b> REMEMBER: Test the backed up file if its working or not, sometimes it may failed to restore.</b>
+</br>
 
 </br>
 - Sometimes the <code>dview</code> may not able to start bash or sh, it because the path
