@@ -29,6 +29,10 @@ Runs in any linux based environment with docker pre-installed. This tools only p
 
 </br>
 
+Article about this tool: https://writings.kanthzone.com/0efb66792c4b
+
+</br>
+
 # How to install
 </br>
 Just download the folder and run the command<br></br>
