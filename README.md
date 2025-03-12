@@ -82,8 +82,8 @@ If backup automatically chooses a wrong image, try cleanup your images by runnin
 This will clear all abandoned/unwanted images and then re-run the backup command.
 </br>
 </br>
-**Disclaimer**</br>
-<b> REMEMBER: We are not guarantee that this backup will 100% works for you, but its better to Test the back up file to make sure the file is working/restorable, sometimes it may fail to restore.</b>
+</br>
+<b> Disclaimer: Please note that while we strive to provide reliable backup solutions, we cannot guarantee that this backup will work perfectly in every situation. We highly recommend testing the backup file to ensure its functionality and restore capability, as there may be instances where restoration could fail.</b>
 </br>
 
 </br>
