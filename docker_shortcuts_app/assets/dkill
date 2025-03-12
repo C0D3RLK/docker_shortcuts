@@ -1,13 +1,23 @@
 #!/bin/bash
 COM=$(which docker)
 BSH=$(which bash)
-$COM ps -a
+#$COM ps -a
+echo "Deleting Container"
+echo "==================="
+$COM ps --format 'table {{.ID}}\t{{.Names}}' | tail -n +2 | nl
 WDR=$1
-
-echo -n  'Docker ID #>:'
+echo "======================="
+echo " n - to cancel"
+echo ""
+echo -n  '#>:'
 read input
+cid=$(docker ps --format '{{.ID}}' | awk "NR==$input")
+
+if [ -n "$cid" ]
+then
+
 echo "Killing Container"
-$COM kill $input
+$COM kill $cid
 echo "Removing Container"
 #$COM rm $input
 $COM ps -a
@@ -20,4 +30,19 @@ $BSH $WDR/dclean
 echo "Done."
 else
 return
+fi
+
+if [ $clean == "n" ]
+then
+#$BSH $WDR/dclean
+echo "Aborted."
+else
+return
+fi
+
+fi
+
+if [ $input == "n" ]
+then
+echo "Aborted"
 fi
