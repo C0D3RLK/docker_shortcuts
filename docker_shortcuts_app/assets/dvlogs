@@ -2,10 +2,13 @@
 COM=$(which docker)
 BSH=$(which bash)
 WSH=$(which sh)
-$COM ps
-echo -n  '#> Docker ID:'
+echo "View Container Log"
+echo "=================="
+echo ""
+$COM ps --format 'table {{.ID}}\t{{.Names}}' | tail -n +2 | nl
+#$COM ps
+echo -n  '#>:'
 read input
 echo ""
-
-$COM logs $input
-
+cid=$(docker ps --format '{{.ID}}' | awk "NR==$input")
+$COM logs $cid
