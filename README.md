@@ -75,5 +75,4 @@ This will clear all abandoned/unwanted images and then re-run the backup command
 </br>
 
 </br>
-- Sometimes the <code>dview</code> may not able to start the bash or sh, it's because the path it uses
-<code>/usr/bin/bash</code> & <code>/usr/bin/sh</code> . Instead you can try using <code>/bin/bash </code> or <code> /bin/sh </code>
+
