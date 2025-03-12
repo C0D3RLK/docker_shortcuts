@@ -1,21 +1,27 @@
 #!/bin/bash
   #docker Inspect
-CMD=$(which docker)
+COM=$(which docker)
 clear
-$CMD ps
+#$CMD ps
+echo "Docker Container Inspect"
+echo "========================="
+echo ""
+$COM ps --format 'table {{.ID}}\t{{.Names}}' | tail -n +2 | nl
 echo "================"
 echo ""
 echo "To cancel: n"
-echo -n 'Docker ID:> '
+echo -n '#:> '
 read did
+
+cid=$(docker ps --format '{{.ID}}' | awk "NR==$did")
+
 
 if [ $did == "n" ]
 then
 echo "Action cancelled"
 fi
-  
+
 if [ $did != "n" ]
 then
-$CMD inspect $did
+$COM inspect $cid
 fi
-
