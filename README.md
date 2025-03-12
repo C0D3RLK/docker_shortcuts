@@ -2,12 +2,17 @@
 ## Tired of typing out full commands to manage your Docker containers? I have a solution for you!
 
 ___
+
 ### Version details
+
 <br>
-Latest: v 1.1
+Latest: v 1.1<br>
+Release date: 12/3/2025
+</br>
+
 ___
 
-
+</br>
 I ’ve been using these CLI shortcut tools for a while, and they have significantly reduced the time I spend remembering long Docker commands.<br>
 I wanted to share this with others who might find it equally beneficial.
 </br>
