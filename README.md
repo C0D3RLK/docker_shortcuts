@@ -88,3 +88,9 @@ This will clear all abandoned/unwanted images and then re-run the backup command
 
 </br>
 
+___
+
+# Updating
+</br>
+How to update into new scripts if you have the older version installed.
+</br> Just downlaod the new version and run the <code>installer.sh</code> the script will automatically detect the existing isntallation and will install the new files by removing the older.
