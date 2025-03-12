@@ -38,9 +38,9 @@ installer() {
     # Check and add the alias if it doesn't already exist
     if ! grep -qxF "$alias_cmd" ~/.bashrc; then
         echo "$alias_cmd" >> ~/.bashrc
-        echo "Shortcut added to .bashrc."
+        echo "Shortcut added."
     else
-        echo "Shortcut already exists in .bashrc."
+        echo "Shortcut already exists."
     fi
 
     echo ""
