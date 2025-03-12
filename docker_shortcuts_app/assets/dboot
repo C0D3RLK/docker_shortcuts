@@ -5,10 +5,21 @@ echo ""
 echo "Reboot Container"
 echo "------------------"
 echo ""
-$COM ps
+#$COM ps
+$COM ps --format 'table {{.ID}}\t{{.Names}}' | tail -n +2 | nl
 echo ""
-echo -n "ContainerID>: "
+echo -n "#>: "
 read input
+cid=$(docker ps --format '{{.ID}}' | awk "NR==$input")
+clear
+#echo "Rebooting:"
+$COM  ps --format '{{.ID}}\t{{.Names}}' | awk "NR==$input"
 
-$COM restart $input
+if [ -n "$cid" ]
+then
+echo "Rebooting:"
+$COM restart $cid
 $COM ps
+else
+echo "Please insert the list number from the table."
+fi
