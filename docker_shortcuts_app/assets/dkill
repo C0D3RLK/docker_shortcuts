@@ -19,7 +19,7 @@ then
 echo "Killing Container"
 $COM kill $cid
 echo "Removing Container"
-#$COM rm $input
+#$COM rm $cid
 $COM ps -a
 echo ""
 echo -n "Do you want to Clean Docker Containers? [y/n]"
@@ -37,7 +37,7 @@ then
 #$BSH $WDR/dclean
 echo "Aborted."
 else
-return
+#return
 fi
 
 fi
