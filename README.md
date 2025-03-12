@@ -15,15 +15,20 @@ Runs in any linux based environment with docker pre-installed. This tools only p
 1.) List all dockers, images & ports <br>
 2.) Reboot container<br>
 3.) Change Restart-Policy<br>
-4.) Delete & Prunce containers & images<br>
+4.) Delete & Prune containers & images<br>
 5.) Create Backup of your container.<br>
 6.) Restore and deploy container from backup.<br>
 8.) Download file from running container</br>
 9.) Upload file into a running container</br>
 10.) View running container logs </br>
 11.) Inspect running container </br>
+12.) Establishes interactive access to container </br>
 </br>
-<center></center>
+<img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*fHteXZTIJOE695F1Fr4mXw.png" />
+
+
+
+<center>
 <!-- <img src="https://public.kanthzone.com/images/docker_sh_howitworks.png" /> -->
 <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*bVjf3739lEJmwyFw04cICg.png" />
   </center>
@@ -47,7 +52,7 @@ Just download the folder and run the command<br></br>
 Command Available:</br>
 ------------------------</br>
 d ls           &emsp;&emsp;  - To list all running containers</br>
-d view         &emsp;&emsp; - To access container</br>
+d view         &emsp;&emsp; - To start interactive access to a container</br>
 d img          &emsp;&emsp; - To list all images</br>
 d img -a       &emsp;&emsp; - To list all images including hidden/stopped</br>
 d kill         &emsp;&emsp; - To remove container</br>
