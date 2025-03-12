@@ -42,8 +42,11 @@ Article about this tool: https://writings.kanthzone.com/0efb66792c4b
 # How to install
 </br>
 Just download the folder and run the command<br></br>
+<code>
+cd /docker_shortcuts-main
+cd /docker_shortcuts_app
 . install.sh
-</br>
+</code></br>
 </br>
 
 
