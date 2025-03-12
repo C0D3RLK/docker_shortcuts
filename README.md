@@ -1,6 +1,13 @@
 # Docker Shortcut Tools
 ## Tired of typing out full commands to manage your Docker containers? I have a solution for you!
 
+___
+### Version details
+<br>
+Latest: v 1.1
+___
+
+
 I ’ve been using these CLI shortcut tools for a while, and they have significantly reduced the time I spend remembering long Docker commands.<br>
 I wanted to share this with others who might find it equally beneficial.
 </br>
@@ -94,3 +101,10 @@ ___
 </br>
 How to update into new scripts if you have the older version installed.
 </br> Just downlaod the new version and run the <code>installer.sh</code> the script will automatically detect the existing isntallation and will install the new files by removing the older.
+
+# Check Version
+<br> How to check the script version you have?</br>
+run command <code>d help</code> </br>
+The script will show to version at the top.
+
+
