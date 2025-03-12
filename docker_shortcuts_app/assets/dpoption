@@ -3,14 +3,17 @@ clear
 DOC=$(which docker)
 #/usr/bin/docker ps -a
 #docker ps -a --format 'ID: {{ .ID }}\t Image: {{.Image}}\t Name: {{ .Names }}'
-$DOC ps -a --format 'table {{ .ID }}\t {{.Image}}\t {{ .Names }}\t  {{ .Status }}'
+#$DOC ps -a --format 'table {{ .ID }}\t {{.Image}}\t {{ .Names }}\t  {{ .Status }}'
+$DOC ps   --format 'table {{.ID}}\t{{.Names}}\t{{.Image}}\t  {{.Status}}' | tail -n +2 | nl
 echo ""
 echo "======================================="
 echo "Change/Set Docker Restart Policy."
 echo "You can list many ID with space between each."
 echo ""
-echo -n  'Insert Docker ID #>:'
-read input
+echo -n  '#>:'
+read listnum
+input=$(docker ps --format '{{.ID}}' | awk "NR==$listnum")
+#read input
 echo ""
 echo "----------------------------------------"
 echo "Selected Dockers:"
