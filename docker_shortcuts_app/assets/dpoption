@@ -8,7 +8,6 @@ $DOC ps   --format 'table {{.ID}}\t{{.Names}}\t{{.Image}}\t  {{.Status}}' | tail
 echo ""
 echo "======================================="
 echo "Change/Set Docker Restart Policy."
-echo "You can list many ID with space between each."
 echo ""
 echo -n  '#>:'
 read listnum
