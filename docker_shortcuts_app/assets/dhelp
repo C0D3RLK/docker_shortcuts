@@ -1,6 +1,7 @@
 #!/bin/bash
 echo ""
-echo "docker-short-cut v1.1"
+echo "V: docker-short-cut v1.1"
+echo ""
 echo "d <option>"
 echo ""
 echo "Command Available:"
