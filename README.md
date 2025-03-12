@@ -76,11 +76,14 @@ ___
 # Troubleshooting
 </br>
 </br>
-- If backup automatically chooses a wrong image, try cleanup your images by running the prune command<br>
-d clean</br>
+If backup automatically chooses a wrong image, try cleanup your images by running the prune command<br>
+<code>d clean</code>
+</br>
 This will clear all abandoned/unwanted images and then re-run the backup command.
 </br>
-<b> REMEMBER: Test the back up file to make sure the file is workin, sometimes it may fail to restore.</b>
+</br>
+**Disclaimer**</br>
+<b> REMEMBER: We are not guarantee that this backup will 100% works for you, but its better to Test the back up file to make sure the file is working/restorable, sometimes it may fail to restore.</b>
 </br>
 
 </br>
