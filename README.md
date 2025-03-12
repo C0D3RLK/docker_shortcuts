@@ -24,8 +24,9 @@ Runs in any linux based environment with docker pre-installed. This tools only p
 11.) Inspect running container </br>
 </br>
 <center></center>
-<img src="https://public.kanthzone.com/images/docker_sh_howitworks.png" />
-</center>
+<!-- <img src="https://public.kanthzone.com/images/docker_sh_howitworks.png" /> -->
+<img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*bVjf3739lEJmwyFw04cICg.png" />
+  </center>
 
 </br>
 
