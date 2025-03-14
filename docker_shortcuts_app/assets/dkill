@@ -40,7 +40,7 @@ else
 #return
 fi
 
-fi
+#fi
 
 if [ $input == "n" ]
 then
