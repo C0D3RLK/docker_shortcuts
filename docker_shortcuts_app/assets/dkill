@@ -40,7 +40,7 @@ echo "Aborted."
 #return
 fi
 
-#fi
+fi
 
 if [ $input == "n" ]
 then
