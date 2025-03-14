@@ -36,7 +36,7 @@ if [ $clean == "n" ]
 then
 #$BSH $WDR/dclean
 echo "Aborted."
-else
+#else
 #return
 fi
 
