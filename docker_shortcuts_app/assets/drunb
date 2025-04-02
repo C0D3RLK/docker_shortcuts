@@ -1,0 +1,3 @@
+#!/bin/bash  
+COM=$(which docker)
+$COM compose up -d --build
