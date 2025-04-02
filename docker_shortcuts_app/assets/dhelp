@@ -1,6 +1,6 @@
 #!/bin/bash
 echo ""
-echo "V: docker-short-cut v1.1"
+echo "V: docker-short-cut v1.1.1"
 echo ""
 echo "d <option>"
 echo ""
@@ -21,4 +21,8 @@ echo "d clean           - To prune"
 echo "d log             - To view container logs"
 echo "d ins             - To inspect container"
 echo "d copy            - To Upload/Download between Host & Container"
+echo "d mon             - Will monitor container for 1 miniute and report if it's stable and up or not"
+echo "d run             - To run docker compose as daemon -d"
+echo "d runb            - To run docker compose as daemon and rebuild -d --build"
+
 echo ""
