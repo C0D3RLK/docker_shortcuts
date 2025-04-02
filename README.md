@@ -35,6 +35,9 @@ Runs in any linux based environment with docker pre-installed. This tools only p
 10.) View running container logs </br>
 11.) Inspect running container </br>
 12.) Establishes interactive access to container </br>
+### 2/4/2025
+13.) Monitors container status
+14.) Shortcut for Docker compose up for "daemon" and "rebuild"
 </br>
 <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*fHteXZTIJOE695F1Fr4mXw.png" />
 
