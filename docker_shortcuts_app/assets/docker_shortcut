@@ -87,3 +87,18 @@ if [ $CMD == "log" ]
 then
 $BSH $WDR/dvlogs
 fi
+
+if [ $CMD == "mon" ]
+then
+$BSH $WDR/dmondeploy
+fi
+
+if [ $CMD == "run" ]
+then
+$BSH $WDR/drun
+fi
+
+if [ $CMD == "runb" ]
+then
+$BSH $WDR/drunb
+fi
