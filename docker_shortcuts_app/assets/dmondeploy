@@ -1,1 +1,45 @@
 
+#!/bin/bash  
+COM=$(which docker)
+echo "Quick monitor Container"
+echo "==================="
+$COM ps --format 'table {{.ID}}\t{{.Names}}' | tail -n +2 | nl
+WDR=$1
+echo "======================="
+echo " n - to cancel"
+echo ""
+echo -n  '#>:'
+read input
+cid=$(docker ps --format '{{.ID}}' | awk "NR==$input")
+
+if [ $input == "n" ]
+then
+echo "Aborted"
+fi
+
+if [ -n "$cid" ]
+then
+
+echo "Monitoring container: $cid _"
+CONTAINER=$cid  
+MONITOR_DURATION=60  # Duration to monitor in seconds  
+CHECK_INTERVAL=5      # Interval between checks in seconds  
+
+# Start monitoring the container  
+for (( elapsed=0; elapsed<MONITOR_DURATION; elapsed+=CHECK_INTERVAL )); do  
+  # Get the current status of the container  
+  STATUS=$(docker inspect --format='{{.State.Status}}' "$CONTAINER" 2>/dev/null)  
+
+  # Check if the container is starting or has restarted  
+  if [[ "$STATUS" == "restarting" ]]; then  
+    echo "Docker container '$CONTAINER' has failed to stay up."  
+    exit 0  
+  fi  
+
+  # Sleep for the specified check interval  
+  sleep $CHECK_INTERVAL  
+done  
+
+echo "Monitoring completed. No status change to 'restarting' detected for container '$CONTAINER'."
+
+fi
