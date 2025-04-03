@@ -6,8 +6,8 @@ ___
 ### Version details
 
 <br>
-Latest: v 1.1<br>
-Release date: 12/3/2025
+Latest: v 1.1.1<br>
+Release date: 3/4/2025
 </br>
 
 ___
