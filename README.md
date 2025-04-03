@@ -37,7 +37,7 @@ Runs in any linux based environment with docker pre-installed. This tools only p
 12.) Establishes interactive access to container </br> </br>
 ### 2/4/2025 </br>
 13.) Monitors container status </br>
-14.) Shortcut for Docker compose up for "daemon" and "rebuild" </br>
+14.) Shortcut for Docker compose up for "detach" and "rebuild" </br>
 </br>
 <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*fHteXZTIJOE695F1Fr4mXw.png" />
 
@@ -84,6 +84,9 @@ d clean        &emsp;&emsp; - To prune</br>
 d copy         &emsp;&emsp; - To Upload / Download files between Host & Container</br>
 d log         &emsp;&emsp; - To view contianer logs</br>
 d ins         &emsp;&emsp; - To inspect contianer </br>
+d mon          &emsp;&emsp; - To monitor container for any restart loop
+d run          &emsp;&emsp; - To run docker compose with "detached" -d
+d runb         &emsp;&emsp;  -  To run docker compose with detached and rebuild "-d --build"
 
 
 </br></br>
