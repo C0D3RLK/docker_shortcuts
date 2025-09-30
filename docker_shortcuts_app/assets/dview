@@ -2,6 +2,14 @@
 COM=$(which docker)
 BSH=$(which bash)
 WSH=$(which sh)
+v1="/usr/bin/bash"
+v2="/usr/bin/sh"
+v3="/bin/bash"
+v4="/bin/sh"
+v5="/sh"
+v6="/bash"
+
+
 echo "Docker Container Access"
 echo "======================="
 echo ""
@@ -12,15 +20,15 @@ read input
 cid=$(docker ps --format '{{.ID}}' | awk "NR==$input")
 
 echo ""
-#echo "[1] /usr/bin/Bash"
-#echo "[2] /usr/bin/Sh"
-#echo "[3] /bin/Bash"
-#echo "[4] /bin/sh"
-#echo "[5] /sh"
-#echo "[6] /bash"
-echo "[1] Your environment SH"
-echo "[2] Your environemtn Bash"
-echo "[3] Input Environment Path"
+echo "[1] /usr/bin/Bash"
+echo "[2] /usr/bin/Sh"
+echo "[3] /bin/Bash"
+echo "[4] /bin/sh"
+echo "[5] /sh"
+echo "[6] /bash"
+#echo "[1] Your environment SH"
+#echo "[2] Your environemtn Bash"
+echo "[7] Input Environment Path"
 echo "[n] Abort"
 
 echo -n 'Which Environment #:>'
@@ -28,26 +36,49 @@ read environment
 
 if [ $environment == 1 ]
 then
-$COM exec -it $cid $BSH
+$COM exec -it $cid $v1
 #echo 'hello'
 fi
 
 if [ $environment == 2 ]
 then
-$COM exec -it $cid $WSH
+$COM exec -it $cid $v2
 #echo 'hello'
 fi
 
 if [ $environment == 3 ]
 then
-#$COM exec -it $cid $WSH
+$COM exec -it $cid $v3
 #echo 'hello'
+fi
 
+if [ $environment == 4 ]
+then
+$COM exec -it $cid $v4
+#echo 'hello'
+fi
+
+if [ $environment == 5 ]
+then
+$COM exec -it $cid $v5
+#echo 'hello'
+fi
+
+if [ $environment == 6 ]
+then
+$COM exec -it $cid $v6
+#echo 'hello'
+fi
+
+if [ $environment == 7 ]
+then
+#$COM exec -it $cid $environment
 echo -n "Insert the bash / sh path #:>"
 read envpath
 $COM exec -it $cid $envpath
-
+#echo 'hello'
 fi
+
 
 if [ $environment == "n" ]
 then
